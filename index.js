@@ -1,5 +1,4 @@
 
-
 document.getElementById("questions-box").addEventListener('click', function(){
     window.location.href = 'question.html';
 });
@@ -16,8 +15,6 @@ let formattedDate = todayDate.toLocaleDateString('en-US', DMY);
 
 dayName.textContent = weekday +',';
 dateMonthYear.textContent = formattedDate;
-console.log(formattedDate)
-
 
 // function for window alert and button disable
 function alertNdisable(buttonID){
@@ -37,14 +34,12 @@ function taskDecreasing(){
 
     if(taskBox.innerText === "0") {
         window.alert('Congrats! You have completed all the task')
-        // console.log('Congrats! You have completed all the task')
     }
 }
 
 // function for task increasing in the header bar
 function taskIncreasing(){
     const navTaskCount = document.getElementById("navTaskCount");
-    // let changedNavTaskCount;
     let changedNavTaskCount = parseFloat(navTaskCount.innerText) + 1;
     navTaskCount.textContent = changedNavTaskCount;
 }
@@ -65,42 +60,11 @@ function addHistory(taskTitle) {
     historySection.appendChild(addhistory);
 }
 
-/* document.getElementById("button-one").addEventListener("click", function(){
-    
-    alertNdisable('button-one');
-    taskDecreasing();
-    taskIncreasing();
-    addHistory('mobile-fixing');
-    
-});
-
-
-document.getElementById("button-two").addEventListener('click', function(){
-    alertNdisable('button-two');
-    taskDecreasing();
-    taskIncreasing();
-    addHistory('darkMode');
-}); */
-
 
 const completeBtns = document.querySelectorAll('.complete-btn');
  
 for(let completeBtn of completeBtns) {
     completeBtn.addEventListener("click", function(event){
-
-        /* if(event.target.id === "button-one") {
-            alertNdisable(event.target.id);
-            taskIncreasing();
-            taskDecreasing();
-            addHistory(event.target.id+"Title");
-        }
-
-        else if(event.target.id === "button-two") {
-            alertNdisable(event.target.id);
-            taskIncreasing();
-            taskDecreasing();
-            addHistory('darkMode');
-        } */
 
             alertNdisable(event.target.id);
             taskIncreasing();
