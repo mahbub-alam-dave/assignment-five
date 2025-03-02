@@ -1,7 +1,7 @@
 
 
 document.getElementById("questions-box").addEventListener('click', function(){
-    window.location.href = '../html-folder/question.html';
+    window.location.href = 'question.html';
 });
 
 // show day name, date, month and year Dynamically
