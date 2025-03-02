@@ -9,6 +9,7 @@ document.getElementById("questions-box").addEventListener('click', function(){
 function alertNdisable(buttonID){
     const completedBtn = document.getElementById(buttonID)
     window.alert("Board updated Successfully");
+    
     completedBtn.disabled = true;
 }
 
@@ -19,6 +20,11 @@ function taskDecreasing(){
     let newtask = parseFloat(taskBox.innerText);
     changedTaskBox = newtask - 1;
     taskBox.innerText = changedTaskBox;
+
+    if(taskBox.innerText === "0") {
+        window.alert('Congrats! You have completed all the task')
+        // console.log('Congrats! You have completed all the task')
+    }
 }
 
 // function for task increasing in the header bar
@@ -67,7 +73,6 @@ const completeBtns = document.querySelectorAll('.complete-btn');
  
 for(let completeBtn of completeBtns) {
     completeBtn.addEventListener("click", function(event){
-        console.log(event.target.id)
 
         /* if(event.target.id === "button-one") {
             alertNdisable(event.target.id);
@@ -87,18 +92,37 @@ for(let completeBtn of completeBtns) {
             taskIncreasing();
             taskDecreasing();
             addHistory(event.target.id+"-HistoryAdd");
+
+           
     })
 }
 
 document.getElementById('clearHistoryBtn').addEventListener('click', function(){
-    // const removeHistory =document.getElementsByClassName('stored-history').innerText;
-    // console.log(removeHistory)
-    // document.getElementById('historysec').removeChild(removeHistory)
-    // const clearHistory = document.getElementById('historysec');
-
+    
     const clearHistory = document.querySelectorAll('.stored-history');
     for(let history of clearHistory){
         history.remove();
     }
 
+});
+
+document.getElementById("bgColor").addEventListener("click", function(){
+    const webBody =  document.getElementById("webBody")
+    const allBgColor = ["#A0A0A0", "#CCFFFF", "#FFCCCC", "FFFFCC", "#E0E0E0"];
+
+    // for(let i= 1; i <=allBgColor.length; i++){
+    // let randomBgColor = Math.floor(Math.random() * i) + 1;
+    // console.log(randomBgColor);
+    // webBody.style.backgroundColor = allBgColor[randomBgColor];
+    // }
+    
+    let randomBgColor = Math.floor(Math.random() * allBgColor.length -1) +1;
+    /* for(let color of allBgColor) {
+        webBody.style.backgroundColor = allBgColor[randomBgColor];
+        console.log(randomBgColor)
+    } */
+
+    webBody.style.backgroundColor = allBgColor[randomBgColor];
+    console.log(randomBgColor)
 })
+
