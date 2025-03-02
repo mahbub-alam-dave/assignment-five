@@ -1,18 +1,8 @@
-// console.log("Js folder added");
+
 
 document.getElementById("questions-box").addEventListener('click', function(){
     window.location.href = '../html-folder/question.html';
 })
-
-// const navTaskCount = document.getElementById("navTaskCount");
-// const taskBox = document.getElementById('taskBox');
-// const btnOne = document.getElementById("button-one");
-// let changedTaskBox;
-// let changedNavTaskCount;
-
-
-// container title 
-// const mobileFixing = document.getElementById("mobile-fixing").innerText;
 
 
 // function for window alert and button disable
@@ -47,6 +37,7 @@ function addHistory(taskTitle) {
     const taskBoxTitle =  document.getElementById(taskTitle).innerText;
 
     const addhistory = document.createElement("div");
+    addhistory.classList.add('stored-history');
     const addhistoryContent = document.createElement("p");
     addhistoryContent.textContent = `You have completed the task ${taskBoxTitle} at ${currentTime}`
     addhistory.appendChild(addhistoryContent);
@@ -54,25 +45,60 @@ function addHistory(taskTitle) {
     historySection.appendChild(addhistory);
 }
 
-document.getElementById("button-one").addEventListener("click", function(){
+/* document.getElementById("button-one").addEventListener("click", function(){
     
-    
-    // let newtask = parseFloat(taskBox.innerText);
-    // changedTaskBox = newtask - 1;
-    // console.log(changedTaskBox);
-    // taskBox.innerText = changedTaskBox;
     alertNdisable('button-one');
     taskDecreasing();
     taskIncreasing();
     addHistory('mobile-fixing');
-
-    // let newNavTask = parseFloat(navTaskCount.innerText) + 1;
-    // navTaskCount.textContent = newNavTask;
-
-    // const addhistory = document.createElement("div");
-    // const addhistoryContent = document.createElement("p");
-    // addhistoryContent.textContent = `You have completed the task ${mobileFixing} at ${currentTime}`
-    // addhistory.appendChild(addhistoryContent);
-    // historySec.appendChild(addhistory);
     
 });
+
+
+document.getElementById("button-two").addEventListener('click', function(){
+    alertNdisable('button-two');
+    taskDecreasing();
+    taskIncreasing();
+    addHistory('darkMode');
+}); */
+
+
+const completeBtns = document.querySelectorAll('.complete-btn');
+ 
+for(let completeBtn of completeBtns) {
+    completeBtn.addEventListener("click", function(event){
+        console.log(event.target.id)
+
+        /* if(event.target.id === "button-one") {
+            alertNdisable(event.target.id);
+            taskIncreasing();
+            taskDecreasing();
+            addHistory(event.target.id+"Title");
+        }
+
+        else if(event.target.id === "button-two") {
+            alertNdisable(event.target.id);
+            taskIncreasing();
+            taskDecreasing();
+            addHistory('darkMode');
+        } */
+
+            alertNdisable(event.target.id);
+            taskIncreasing();
+            taskDecreasing();
+            addHistory(event.target.id+"-HistoryAdd");
+    })
+}
+
+document.getElementById('clearHistoryBtn').addEventListener('click', function(){
+    // const removeHistory =document.getElementsByClassName('stored-history').innerText;
+    // console.log(removeHistory)
+    // document.getElementById('historysec').removeChild(removeHistory)
+    // const clearHistory = document.getElementById('historysec');
+
+    const clearHistory = document.querySelectorAll('.stored-history');
+    for(let history of clearHistory){
+        history.remove();
+    }
+
+})
