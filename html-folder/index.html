@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="changeBgcolor">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
 </style>
     
 </head>
-<body id="webBody" class="font-poppins max-w-[1600px] mx-auto mt-4 lg:mt-8 p-4">
+<body class="font-poppins max-w-[1600px] mx-auto mt-4 lg:mt-8 p-4">
 
     <header class=" w-full bg-white rounded-md shadow-sm p-6 flex justify-between items-center">
         <div class="flex items-center gap-2 ">
@@ -67,7 +67,11 @@
     
                 <div class="-order-1 lg:order-1 flex items-center gap-3 bg-[#F4F7FF] p-6 rounded-xl">
                     <figure class="bg-white rounded-[50%] p-3"><img src="../assets/calender.png" alt=""></figure>
-                    <time class="text-[22px] font-normal" datetime="">Wed,<br><span class="font-bold tracking-[3%] text-[#00303C]">Jul 28, 2025</span></time>
+                    <!-- <time class="text-[22px] font-normal" datetime="">Wed,<br><span class="font-bold tracking-[3%] text-[#00303C]">Jul 28, 2025</span></time> -->
+                    <div class="text-[22px] font-normal"> 
+                        <p id="dayName"></p> 
+                        <p class="font-bold tracking-[3%] text-[#00303C]" id="dateMonthYear"></p>
+                    </div>
                 </div>
             </div>
     

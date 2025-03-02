@@ -2,7 +2,21 @@
 
 document.getElementById("questions-box").addEventListener('click', function(){
     window.location.href = '../html-folder/question.html';
-})
+});
+
+// show day name, date, month and year Dynamically
+const dateMonthYear = document.getElementById("dateMonthYear");
+const dayName = document.getElementById("dayName");
+
+let todayDate = new Date();
+
+const weekday = todayDate.toLocaleDateString('en-GB', { weekday: 'short'});
+let DMY = { month: 'short', day: '2-digit', year: 'numeric' };
+let formattedDate = todayDate.toLocaleDateString('en-US', DMY);
+
+dayName.textContent = weekday +',';
+dateMonthYear.textContent = formattedDate;
+console.log(formattedDate)
 
 
 // function for window alert and button disable
@@ -107,21 +121,9 @@ document.getElementById('clearHistoryBtn').addEventListener('click', function(){
 });
 
 document.getElementById("bgColor").addEventListener("click", function(){
-    const webBody =  document.getElementById("webBody")
+    const webBody =  document.getElementById("changeBgcolor")
     const allBgColor = ["#A0A0A0", "#CCFFFF", "#FFCCCC", "FFFFCC", "#E0E0E0"];
-
-    // for(let i= 1; i <=allBgColor.length; i++){
-    // let randomBgColor = Math.floor(Math.random() * i) + 1;
-    // console.log(randomBgColor);
-    // webBody.style.backgroundColor = allBgColor[randomBgColor];
-    // }
-    
     let randomBgColor = Math.floor(Math.random() * allBgColor.length -1) +1;
-    /* for(let color of allBgColor) {
-        webBody.style.backgroundColor = allBgColor[randomBgColor];
-        console.log(randomBgColor)
-    } */
-
     webBody.style.backgroundColor = allBgColor[randomBgColor];
     console.log(randomBgColor)
 })

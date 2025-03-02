@@ -26,13 +26,50 @@
         <div><button id="bactDeskBtn" class=" bg-[#3752FD] rounded-lg text-xl font-medium text-white tracking-[3%] px-4 py-3">Back to Desk</button></div>
     </header>
 
-    <section class="mt-8">
+    <section class="mt-8 flex flex-col gap-8">
         <div class="bg-white shadow-sm flex flex-col">
             <div class="border-b p-6">
                 <h2 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h2>
             </div>
             <div class="p-6 ">
-                <p class="text-base font-medium tracking-[3%] text-[rgba(0,48,60,0.75)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ratione eius! Amet cupiditate, commodi quae adipisci quasi rem, nam dicta dignissimos dolorum ullam exercitationem qui atque, quia totam ipsam laboriosam.</p>
+                <p class="text-base font-medium tracking-[3%] text-[rgba(0,48,60,0.75)]">There are many ways to select an element in the DOM. For example, an element can be accessed by ID, by Class, by TagName, by querySelector ad querySelectorAll etc. Although, there are some more ways to select and element in the DOM, these five (ID, class, tagName, querySelector and querySelectorAll) are the best and recommended way to get and Element in the DOM </p>
+            </div>
+        </div>
+
+        <div class="bg-white shadow-sm flex flex-col">
+            <div class="border-b p-6">
+                <h2 class="text-2xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+            </div>
+            <div class="p-6 ">
+                <p class="text-base font-medium tracking-[3%] text-[rgba(0,48,60,0.75)]">InnerHtml returns, sets and parses contents including html tags. innerText returns and sets only the visible text content of an element. It doesn’t show hidden text of the element that is set to display hidden. Also, innerTest preserves spacing based on how it’s shown in the browser. TextContent returns and sets all the content of an element whether the element is set to display hidden. It doesn’t parse html elements. Additionally, innertext doesn’t preserve spacing.</p>
+            </div>
+        </div>
+
+        <div class="bg-white shadow-sm flex flex-col">
+            <div class="border-b p-6">
+                <h2 class="text-2xl font-bold">Question-3: What is event delegation in the DOM?</h2>
+            </div>
+            <div class="p-6 ">
+                <p class="text-base font-medium tracking-[3%] text-[rgba(0,48,60,0.75)]">Event delegation is a very useful method in javascript  where we can use a single event listener to a parent element instead of using multiple event listeners to individual child elements.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white shadow-sm flex flex-col">
+            <div class="border-b p-6">
+                <h2 class="text-2xl font-bold">Question-4: What is event bubbling in the DOM?</h2>
+            </div>
+            <div class="p-6 ">
+                <p class="text-base font-medium tracking-[3%] text-[rgba(0,48,60,0.75)]">When an event starts on an element and then moves up through its parent elements until it reaches the top of the document, this process is called event bubbling.</p>
+            </div>
+        </div>
+
+        <div class="bg-white shadow-sm flex flex-col">
+            <div class="border-b p-6">
+                <h2 class="text-2xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            </div>
+            <div class="p-6 ">
+                <p class="text-base font-medium tracking-[3%] text-[rgba(0,48,60,0.75)]">By using document.createElement() method I can create an element. Then, to add the created element to the document I need to use append() or appendChild() method. Lastly, to remove elements I need to use remove() or removeChild() method.</p>
             </div>
         </div>
     </section>
