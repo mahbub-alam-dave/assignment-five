@@ -89,6 +89,6 @@ document.getElementById("bgColor").addEventListener("click", function(){
     const allBgColor = ["#A0A0A0", "#CCFFFF", "#FFCCCC", "FFFFCC", "#E0E0E0"];
     let randomBgColor = Math.floor(Math.random() * allBgColor.length -1) +1;
     webBody.style.backgroundColor = allBgColor[randomBgColor];
-    console.log(randomBgColor)
+    // console.log(randomBgColor)
 })
 
